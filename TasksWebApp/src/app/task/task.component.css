@@ -1,0 +1,19 @@
+.containerStyle{
+    margin-top: 7rem;
+}
+.header{
+    background-color: cornflowerblue;
+    width: 60vh;
+    border: 1px solid black;
+    height: 4vh;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.appBody{
+      width: 60vh;
+    border: 1px solid black;
+ 
+    background-color: rgb(245, 245, 245);
+}

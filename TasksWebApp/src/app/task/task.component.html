@@ -1,0 +1,20 @@
+<div *ngFor="let task of response">
+  <button type="button" class="btn btn-group-lg" (click)="ShowStep(task.id)">
+    {{ task.name }}
+  </button>
+  <div *ngIf="taskId == task.id && task.steps.length > 0">
+    <ul *ngFor="let item of task.steps">
+      <li>
+        <button type="button" class="btn btn-group-lg">
+          Owner: {{ item.owner }}, Name: {{ item.name }}
+        </button>
+      </li>
+
+      <li *ngIf="item.steps != null" style="list-style: none">
+        <ul *ngFor="let subSteps of item.steps">
+          <li>{{ subSteps.owner }}, {{ subSteps.name }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
